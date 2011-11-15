@@ -1,0 +1,25 @@
+Pluggins 
+--------
+
+CKEditor - WYSIWYG HTML editor
+Version 6.x-1.1
+
+CKEditor 3.3.2
+
+CKfinder 2.0
+
+Node Hierarchy
+Version  6.x-1.3
+
+Views
+Version 6.x-2.11
+
+Content Construction Kit (CCK)
+6.x-2.8
+
+SmoothGallery 2.1dev
+http://smoothgallery.jondesign.net/
+NOT ACTUALLY A DRUPAL MODULE 
+
+~
+

@@ -1,0 +1,13 @@
+
+.jdGallery a.right { background: url('img/fleche2.gif') no-repeat center right; }
+
+.jdGallery a.left { background: url('img/fleche1.gif') no-repeat center left; }
+
+
+.jdGallery a.right, .jdGallery a.left
+{
+	filter:alpha(opacity=20);
+}
+
+.withArrows a.open:hover { background: url('img/open.gif') no-repeat center center;
+	filter:alpha(opacity=80); }

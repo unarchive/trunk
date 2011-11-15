@@ -1,0 +1,30 @@
+/*TEXTAREA tag must be in its own parent div because CLASS and ID TEXTAREA don't work (however TEXTAREA all by its self will still work) */
+.TextareaBox textarea{
+	padding:   5px 10px 5px 10px;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	color:#00588F;
+	/*font-size: 16px;*/
+	font-family:'Arial', sans-serif;
+	border: 2px solid #92B4FF;
+}
+
+/*TEXTAREA tag must be in its own parent div because CLASS and ID TEXTAREA don't work (however TEXTAREA all by its self will still work) */
+.AnswerBox textarea{
+	padding:   5px 10px 5px 10px;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	color:#D08D00;
+	font-family:'Arial', sans-serif;
+	border: 2px solid #EBD51F;
+}
+
+#Hide1 textarea, #Hide2 textarea, #Hide3 textarea, #Hide4 textarea, #Hide5 textarea{
+display: none;	
+}
+
+.RightButt
+{
+ float: right; 
+ margin-right: 25px;
+}

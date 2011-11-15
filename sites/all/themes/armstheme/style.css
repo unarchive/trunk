@@ -1,0 +1,549 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  background-color: #fff;
+  font: 12px Verdana, Arial, sans-serif;
+  font-weight:normal;
+}
+
+tr.odd td, tr.even td {
+  padding: 0.3em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5em;
+}
+h1 {
+  font-size: 1.3em;
+}
+h2 {
+  font-size: 1.2em;
+}
+h3, h4, h5, h6 {
+  font-size: 1.1em;
+}
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.9em;
+}
+a {
+  text-decoration: none;
+  /*font-weight: bold;*/
+}
+a:link {
+  color: #39c;
+}
+a:visited {
+  color: #369;
+}
+a:hover {
+  color: #39c;
+  text-decoration: underline;
+}
+fieldset {
+  border: 1px solid ccc;
+}
+pre {
+  background-color: #eee;
+  padding: 0.75em 1.5em;
+  font-size: 12px;
+  border: 1px solid #ddd;
+}
+table {
+  /* make <td> sizes relative to body size! */
+  font-size: 1em;
+ }
+.form-item label {
+  font-size: 1em;
+  color: #222;
+}
+.item-list .title {
+  font-size: 1em;
+  color: #222;
+}
+.links {
+  margin-bottom: 0;
+}
+.comment .links {
+  margin-bottom: 0;
+}
+
+/*
+** Page layout blocks / IDs
+*/
+#header {
+  width: 800px
+}
+#MainContent{
+  width: 800px%;
+}
+
+#content {
+  width: 100%;
+}
+
+#header {
+  background-color: #69c;
+}
+#logo {
+  vertical-align: middle;
+  border: 0;
+}
+#logo img {
+  float: left; /* LTR */
+  padding: 0 1em;
+  border: 0;
+}
+#menu {
+  /*padding: 0.5em 0.5em 0 0.5em; /* LTR */
+  text-align: right; /* LTR */
+  vertical-align: middle;
+}
+#navlist {
+  font-size: 1.0em;
+  padding: 0 0.8em 1.2em 0; /* LTR */
+  color: #9cf;
+}
+#navlist a {
+  font-weight: bold;
+  color: #fff;
+}
+#subnavlist {
+  padding: 0.5em 1.2em 0.4em 0; /* LTR */
+  font-size: 0.8em;
+  color: #9cf;
+}
+#subnavlist a {
+  font-weight: bold;
+  color: #9cf;
+}
+ul.links li {
+  border-left: 1px solid #9cf; /* LTR */
+}
+ul.links li.first {
+  border: none;
+}
+
+#search .form-text, #search .form-submit {
+  border: 1px solid #369;
+  font-size: 1.1em;
+  height: 1.5em;
+  vertical-align: middle;
+}
+#search .form-text {
+  width: 8em;
+  padding: 0 0.5em;
+}
+#mission {
+  background-color: #369;
+  padding: 1.5em 2em;
+  color: #fff;
+}
+#mission a, #mission a:visited {
+  color: #9cf;
+  font-weight: bold;
+}
+.site-name {
+  margin: 0.6em 0 0 ;
+  padding: 0;
+  font-size: 2em;
+}
+.site-name a:link, .site-name a:visited {
+  color: #fff;
+}
+.site-name a:hover {
+  color: #369;
+  text-decoration: none;
+}
+.site-slogan {
+  font-size: 1em;
+  color: #eee;
+  display: block;
+  margin: 0;
+  font-style: italic;
+  font-weight: bold;
+}
+#main {
+  /* padding in px not ex because IE messes up 100% width tables otherwise */
+  padding: 0px  10px 10px 10px;
+}
+#mission, .node .content, .comment .content {
+  line-height: 1.4em;
+}
+#help {
+  font-size: 0.9em;
+  margin-bottom: 1em;
+}
+
+.messages {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  padding: 0.3em;
+  margin-bottom: 1em;
+}
+.error {
+  border-color: red;
+}
+#sidebar-left, #sidebar-right {
+  background-color: White;
+  padding: 0;
+  vertical-align: top;
+}
+
+
+/*
+** Common declarations for child classes of node, comment, block, box, etc.
+** If you want any of them styled differently for a specific parent, add
+** additional rules /with only the differing properties!/ to .parent .class.
+** See .comment .title for an example.
+*/
+.title, .title a {
+  font-weight: bold;
+  font-size: 1em;
+letter-spacing:1px;
+  color: Black;
+  margin: 0 auto;  /* decrease default margins for h<x>.title */
+}
+.submitted {
+  color: #999;
+  font-size: 0.8em;
+}
+.links {
+  color: #999;
+}
+.links a {
+  font-weight: bold;
+}
+.block, .box {
+ padding: 0 0 1.5em 0; /* LTR */
+ background-color: #E6F0F9;
+}
+
+.block {
+  border-bottom: 5px solid White;
+  padding-top: 3px;
+  padding-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 5px;
+
+}
+.block .title {
+  margin-bottom: .25em;
+}
+.box .title {
+  font-size: 1.1em;
+}
+.node {
+  margin: 0em 0 2em; /* LTR */
+}
+.sticky {
+  padding: .5em;
+  background-color: #eee;
+  border: solid 1px #ddd;
+}
+.comment .content {
+  margin: .5em 0 .5em;
+}
+.node .taxonomy {
+  color: #999;
+  font-size: 0.8em;
+  padding-left: 1.5em; /* LTR */
+}
+.node .picture {
+  border: 1px solid #ddd;
+  float: right; /* LTR */
+  margin: 0.5em;
+}
+.comment {
+  border: 1px solid #abc;
+  padding: .5em;
+  margin-bottom: 1em;
+}
+.comment .title a {
+  font-size: 1.1em;
+  font-weight: normal;
+}
+.comment .new {
+  text-align: right; /* LTR */
+  font-weight: bold;
+  font-size: 0.8em;
+  float: right; /* LTR */
+  color: red;
+}
+.comment .picture {
+  border: 1px solid #abc;
+  float: right; /* LTR */
+  margin: 0.5em;
+}
+
+/*
+** Module specific styles
+*/
+#aggregator .feed-source {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  padding: 1em;
+  margin: 1em 0;
+}
+#aggregator .news-item .categories, #aggregator .source, #aggregator .age {
+  color: #999;
+  font-style: italic;
+  font-size: 0.9em;
+}
+#aggregator .title {
+  margin-bottom: 0.5em;
+  font-size: 1em;
+}
+#aggregator h3 {
+  margin-top: 1em;
+}
+#forum table {
+  width: 100%;
+}
+#forum td {
+  padding: 0.5em;
+}
+#forum td.forum, #forum td.posts {
+  background-color: #eee;
+}
+#forum td.topics, #forum td.last-reply {
+  background-color: #ddd;
+}
+#forum td.container {
+  background-color: #ccc;
+}
+#forum td.container a {
+  color: #555;
+}
+#forum td.statistics, #forum td.settings, #forum td.pager {
+  height: 1.5em;
+  border: 1px solid #bbb;
+}
+#forum td .name {
+  color: #96c;
+}
+#forum td .links {
+  padding-top: 0.7em;
+  font-size: 0.9em;
+}
+#profile .profile {
+  clear: both;
+  border: 1px solid #abc;
+  padding: .5em;
+  margin: 1em 0em;
+}
+#profile .profile .name {
+  padding-bottom: 0.5em;
+}
+.block-forum h3 {
+  margin-bottom: .5em;
+}
+div.admin-panel .description {
+  color: #999;
+}
+div.admin-panel .body {
+  background: #f4f4f4;
+}
+div.admin-panel h3 {
+  background-color: #69c;
+  color: #fff;
+  padding: 5px 8px 5px;
+  margin: 0;
+}
+
+/**************ARMS CSS Updates**************/
+/**********************************************/
+
+#Banner{
+	margin:0px;
+	background: transparent url(images/Banner.jpg) no-repeat;
+	background-position:left top; 
+}
+#BannerArchive{
+	margin:0px;
+	background: transparent url(images/BannerArchive.jpg) no-repeat;
+	background-position:left top; 
+}
+#BannerRecord{
+	margin:0px;
+	background: transparent url(images/BannerRecord.jpg) no-repeat;
+	background-position:left top; 
+}
+
+li.leaf{
+list-style-image:url("images/bullet.jpg");
+}
+
+li.collapsed{
+list-style-image:url("images/bullet.jpg");
+}
+
+li.expanded{
+list-style-image:url("images/bulletDown.jpg");
+}
+
+.expanded ul{ /*nested UL inside an EXPANDED LI*/
+margin-left: -10px;
+}
+
+.menu li a{
+font-weight: normal;
+}
+
+.menu li a:link , .menu li a:visited { /*nested LINK inside LIST under MENU*/
+color: #7B7D80;
+font-weight: normal;
+font-size: 90%;
+}
+
+ li.postlist a:link ,  li.postlist a:visited { /*nested LINK inside LIST of class-type POSTLIST*/
+  color: #08598F;
+}
+
+.menu li  a:hover,  li.postlist  a:hover {
+  color: #39c;
+  /*color: #369;*/
+  text-decoration: underline;
+}
+
+
+ #footer {
+  background-color: #0C5E98;
+  padding: 0em 2em 0em 2em;
+  font-size: 0.9em;
+   width: 800px;
+   Color: white;
+   text-align: right; 
+}
+
+.SideIcon{
+float: left;
+padding: 5px; 
+}
+
+#sidebar-right  .block {
+padding-left: 44px; 
+
+}
+.Blueheader{
+	background: transparent url(images/BlueBar.jpg) no-repeat;
+	background-position:left top; 
+	height:31px;
+	color: White;
+	font-size: 14px;
+	font-weight: bold;
+	padding-left:10px;
+	margin:auto;
+	display: table-cell;
+	vertical-align: middle;
+	width: 420px;
+}
+
+.Blackheader{
+ 	background-position:left top; 
+	height:31px;
+	color: Black;
+	font-size: 14px;
+	font-weight: bold;
+	padding-left:10px;
+	margin:auto;
+	display: table-cell;
+	vertical-align: middle;
+	width: 420px;
+}
+
+#HeaderLowerBar{
+position: relative; /*set the parent relative so that the child can be absolute within that small relative space*/ 
+height: 135px;
+
+}
+
+/*
+.breadcrumb {
+position: absolute; /*If the parent is relative then the absolute will only be within the parent element*/
+/*bottom: 12px;
+color: silver;
+  margin-left: 180px;
+  text-indent:-10px;
+  padding-left:10px; /*Need padding for negative indent to work in IE */
+ /* max-height: 10px;
+  overflow: hidden;
+  min-width: 600px;
+  outline:1px solid red;
+    font-weight:normal;
+}
+
+.breadcrumb a {
+  color: White;
+  font-weight: normal;
+}
+*/
+
+
+.breadcrumb {
+color: silver;
+  text-indent:-10px;
+  padding-left:10px; /*Need padding for negative indent to work in IE */
+  width: 600px;
+}
+
+.breadcrumb a:link {
+	color: #39c;
+}
+
+#LangButton{
+color:White;
+margin-top: 3px;
+text-align: right; 
+padding-right: 5px;
+font-size: 90%;
+font-weight:normal;
+}
+
+#LangButton A{
+color:White;
+}
+
+#SmallSiteTitle{
+font-size: 16px;
+font-style:italic;
+color: #4184C0;
+/*outline: 1px solid red;*/
+}
+
+.Post {
+margin-left: 100px!important; 
+text-decoration: underline;
+}
+
+#SpacerBar{
+width: 400px;
+clear:both;
+}
+
+#QuoteBox{
+	background: transparent url(images/SideIcon1.jpg) no-repeat;
+	background-color: #C5D5EE ;
+	background-position:left top; 
+	width: 162px; /* 172 - 5 - 5 = 162 */
+	min-height: 102px; /*110 - 8 = 102*/
+	padding: 8px 5px 0px 5px ;
+	margin-bottom: 5px;
+}
+
+/*this fixes a drupal bug found in system.css (tbody border-top: 1px solid #ccc)*/
+/*the !important property will always be applied */
+tbody {
+  border-top-width: 0px!important; 
+}
+
+/*drupal was doing border-collapse:collapse; for some reason */
+/*separate spacing and padding will NOT be ignored*/
+table{
+border-collapse:separate;  
+clear:both; /*keeps other elements from floating along side the table*/
+}
+
+

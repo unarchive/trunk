@@ -1,0 +1,30 @@
+#myGallery
+{
+text-align: left;
+margin: 0 auto;
+width: 428px ;
+height: 200px ; /*290px*/
+} 
+
+.jdGallery .slideInfoZone
+{
+
+	height: 40px;
+	background: BLACK;
+	color: #FFFFFF;
+}
+
+.jdGallery .slideInfoZone p
+{
+	color: #FFFFFF;
+	font-size: 10px;
+
+}
+
+
+.jdGallery a.carouselBtn
+{
+	background: grey;
+	color: white;
+}
+

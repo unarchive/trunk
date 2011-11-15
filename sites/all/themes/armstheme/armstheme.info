@@ -1,0 +1,18 @@
+; $Id: armstheme.info, 2011-01-21$
+name = ARMS Theme
+description = ARMS website theme for Drupal.<br><FONT SIZE=1>ver 1.29</FONT>
+
+version = VERSION
+core = 6.x
+engine = phptemplate
+
+stylesheets[all][] = style.css
+
+
+regions[left] = Left sidebar
+regions[right] = Right sidebar
+regions[content] = Content
+regions[lowcontent] = Lower Content
+regions[header] = Header
+regions[footer] = Footer
+regions[lowleft] = Lower Left sidebar
